@@ -17,6 +17,8 @@ public class Enemy : MonoBehaviour {
 	protected GameObject patrollingInterestPoint;
 	protected GameObject playerOfInterest;
 
+	public int damage;
+
 	protected virtual void Start () {
 		print ("START ENENMY!");
 		if(patrolPoints==null) {
@@ -49,9 +51,16 @@ public class Enemy : MonoBehaviour {
 		transform.position = Vector3.MoveTowards(transform.position, playerOfInterest.transform.position, step);
 
 		float distance = Vector3.Distance(transform.position, playerOfInterest.transform.position);
-		if(distance>attackingDistance) {
-			SwitchToChasing(playerOfInterest);
+		if (distance > attackingDistance) {
+			SwitchToChasing (playerOfInterest);
+		} else {
+			AttackPlayer ();
 		}
+	}
+
+	protected virtual void AttackPlayer() {
+		GameController gameController = GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameController>();
+		gameController.Damage(damage);
 	}
 
 	protected virtual void OnChasingUpdate() {

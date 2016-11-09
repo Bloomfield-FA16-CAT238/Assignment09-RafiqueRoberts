@@ -26,7 +26,8 @@ public class Damage : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            gameController.Damage(damage);
+			
+            //gameController.Damage(damage);
 
         }
     }

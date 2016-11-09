@@ -29,18 +29,25 @@ public class NavEnemy : Enemy {
 		float distance = Vector3.Distance(transform.position, playerOfInterest.transform.position);
 		if(distance>attackingDistance) {
 			SwitchToChasing(playerOfInterest);
+		} else {
+			AttackPlayer ();
 		}
+	}
+
+	protected override void AttackPlayer() {
+		base.AttackPlayer ();
+		Debug.Log ("Called from NavEnemy");
 	}
 	
 	protected override void OnChasingUpdate() {
 		navMeshAgent.SetDestination(playerOfInterest.transform.position);
 		
 		float distance = Vector3.Distance(transform.position, playerOfInterest.transform.position);
-		if(distance<=attackingDistance) {
-			SwitchToAttacking(playerOfInterest);
+		if (distance <= attackingDistance) {
+			SwitchToAttacking (playerOfInterest);
 		}
 	}
-	
+
 	protected override void OnPatrollingUpdate() {
 		navMeshAgent.SetDestination(patrollingInterestPoint.transform.position);
 		

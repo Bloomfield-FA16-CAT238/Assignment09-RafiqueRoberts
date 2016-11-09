@@ -345,6 +345,10 @@ Prefab:
       propertyPath: m_Center.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 3ee1b18c2c6d2485d94da7d55534d4a0, type: 2}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3ee1b18c2c6d2485d94da7d55534d4a0, type: 2}
   m_IsPrefabParent: 0
@@ -853,6 +857,10 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 4.9
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 3ee1b18c2c6d2485d94da7d55534d4a0, type: 2}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3ee1b18c2c6d2485d94da7d55534d4a0, type: 2}
   m_IsPrefabParent: 0
@@ -962,7 +970,7 @@ GameObject:
   - 114: {fileID: 684207404}
   m_Layer: 0
   m_Name: GameController
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1237,7 +1245,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 858538491}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 087f675d763aa5a4787c6d97856442d9, type: 3}
   m_Name: 
@@ -1779,7 +1787,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1358154910}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 087f675d763aa5a4787c6d97856442d9, type: 3}
   m_Name: 
@@ -2272,12 +2280,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1608637896}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 087f675d763aa5a4787c6d97856442d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameController: {fileID: 684207404}
+  gameController: {fileID: 0}
   damage: 1
 --- !u!1 &1686971655
 GameObject:
@@ -2575,6 +2583,10 @@ Prefab:
     - target: {fileID: 19500000, guid: b0844e290c9f74849be8132a57cd53b9, type: 2}
       propertyPath: m_StoppingDistance
       value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: b0844e290c9f74849be8132a57cd53b9, type: 2}
+      propertyPath: damage
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6500002, guid: b0844e290c9f74849be8132a57cd53b9, type: 2}
